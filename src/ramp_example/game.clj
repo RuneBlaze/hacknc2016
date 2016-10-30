@@ -53,7 +53,7 @@
                  (texture "dialogs/d9.png")]))
 
 (defn see-dialog? []
-  (> (:x (:actor @gamestate)) 1700))
+  (> (:x (:actor @gamestate)) 0))
 
 (defn push-popup! [id]
   (swap! gamestate #(update % :popups (fn [it] (conj it {:id id :timer 0})))))
